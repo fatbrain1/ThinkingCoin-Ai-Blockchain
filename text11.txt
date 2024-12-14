@@ -1,0 +1,52 @@
+Blockchain approve of thinking coin proposal 
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract ThinkingCoin {
+    // State variables
+    address public owner;
+    uint256 public totalSupply;
+    mapping(address => uint256) public balances;
+
+    struct Thought {
+        string content;
+        string weatherType;
+        uint256 score;
+    }
+
+    mapping(address => Thought[]) public userThoughts;
+
+    event ThoughtLogged(address indexed user, string content, uint256 reward);
+
+    constructor() {
+        owner = msg.sender;
+        totalSupply = 1000000 * 10**18; // 1 million Thinking Coins
+        balances[owner] = totalSupply;
+    }
+
+    // Log a thought and reward Thinking Coins
+    function logThought(string memory content, string memory weatherType, uint256 score) public {
+        require(score > 0 && score <= 100, "Invalid score");
+
+        uint256 reward = calculateReward(score);
+        require(balances[owner] >= reward, "Insufficient contract balance");
+
+        // Add thought to user data
+        userThoughts[msg.sender].push(Thought(content, weatherType, score));
+        balances[owner] -= reward;
+        balances[msg.sender] += reward;
+
+        emit ThoughtLogged(msg.sender, content, reward);
+    }
+
+    // Calculate reward based on AI-assigned score
+    function calculateReward(uint256 score) private pure returns (uint256) {
+        return score * 10**16; // Example: 0.01 Thinking Coin per score point
+    }
+
+    // View balance of a user
+    function balanceOf(address user) public view returns (uint256) {
+        return balances[user];
+    }
+}
