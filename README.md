@@ -9,7 +9,7 @@ Rewards: Trust and transparency with low-cost smart contract.
 Off-Chain Database:
 Scalable, efficient data handeling with AWS and decentralized storage.
 this is open source project and we encourge contributions to join us..!
-early contributors will earn thinkng coins rewards
+early contributors will earn thinking coins rewards
 Contact
 Adam Mansour
 mansjobs@icloud.com
