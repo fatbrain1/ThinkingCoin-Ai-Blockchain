@@ -1,0 +1,34 @@
+## Smart Contract: Thinking Coin
+
+### Location
+- The smart contract code is located in the `smart_contracts/ThinkingCoin.sol` file.
+
+### Features
+- **Approval of Thinking (PoT) Mechanism**: Rewards contributors based on approved ideas and activities.
+- **Optimized Gas Fees**: Updated to minimize transaction costs using off-chain solutions.
+- **End-to-End Encryption**: Ensures secure handling of thought ownership and rewards distribution.
+
+### Workflow
+
+#### 1. Updating the Contract
+- Review the current version in `smart_contracts/ThinkingCoin.sol`.
+- Submit proposed changes via a Pull Request with:
+  - Detailed explanation of the update.
+  - Test cases demonstrating the change.
+
+#### 2. Testing the Contract
+- Use tools like Hardhat or Truffle to test changes locally:
+  - Run `npm install` to set up dependencies.
+  - Execute tests with `npx hardhat test` or `truffle test`.
+- Ensure all tests pass before submitting updates.
+
+#### 3. Deploying the Contract
+- Test deployments on a testnet (e.g., Ropsten, Goerli).
+- Deployment steps:
+  1. Configure the `.env` file with private keys and RPC URLs.
+  2. Run `npx hardhat run scripts/deploy.js --network <network-name>`.
+  3. Verify the deployment on a blockchain explorer.
+
+### Contributions & Rewards
+- Updates to the smart contract will earn **Thinking Coin** rewards based on the significance of the contribution.
+- Ensure compliance with the guidelines in `CONTRIBUTING.md`.
