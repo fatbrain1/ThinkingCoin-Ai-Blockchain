@@ -4,8 +4,10 @@ on:                  # Events to trigger the workflow
   push:
     branches:
       - main         # Run the workflow on push to the main branch
-  pull_request:
-    branches:
+            # git checkout -b vision-updates
+          
+
+
       - main         # Run the workflow on pull requests targeting the main branch
 
 jobs:                # Define the workflow jobs
