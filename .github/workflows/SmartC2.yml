@@ -1,5 +1,5 @@
 
-name: CI Workflow  # Name of the workflow
+name: CI Workflow  # Smartc2.yml
 
 on:                # Events that trigger the workflow
   push:
