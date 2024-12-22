@@ -1,0 +1,33 @@
+name: Vision Workflow  # TC-workflow.yml
+
+on:                  # Events to trigger the workflow
+  push:
+    branches:
+      - main         # Run the workflow on push to the main branch
+  pull_request:
+    branches:
+      - main         # Run the workflow on pull requests targeting the main branch
+
+jobs:                # Define the workflow jobs
+  vision-sync:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Check out the repository code
+
+      - name: Validate YAML Files
+        uses: rhysd/actionlint@v1.6.6  # Validate YAML syntax to ensure workflows are error-free (use the latest version)
+
+      - name: Run Vision Update Script
+        run: |
+          echo "Syncing project vision and thoughts..."
+          echo "Vision updates are live!" > vision.log
+
+      - name: Upload Vision Logs
+        uses: actions/upload-artifact@v3  # Save logs as an artifact
+        with:
+          name: vision-logs
+          path: vision.log
+
+      - name: Send Vision Update Notification
+        run: echo "Vision Workflow Completed Successfully!"
