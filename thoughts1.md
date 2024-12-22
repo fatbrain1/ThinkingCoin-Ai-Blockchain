@@ -1,5 +1,5 @@
 # Thoughts on Thinking Coin.
-* Introduction:
+  * Introduction:
 In this File you will see all thoughts and ideas update linked to Thinking Coin,
 Space to capure and orginize ideas related to vision and direction of Thinking Coin project.
 * Core Ideas.
@@ -30,5 +30,5 @@ Space to capure and orginize ideas related to vision and direction of Thinking C
 - What are the most efficient ways to collect voice data globally?  
 - How can we reduce language translation costs for rural areas?
 - How we can build smart contract that with our vision approve of Thinking along with default contract?
-- what is best smart contract that grantee low gaz feees for our approve of thinking to blockchain contract?
-  for answering All above questions? we need developers to contribute with us as this project is open source, so dive in share your ideas with us.!
+- what is best smart contract that grantee low gas fees? that fit to transactions grouth to blockchain contract?
+  For answering All above questions? we need developers to contribute with us as this project is open source, so dive in share your ideas with us.!
