@@ -1,7 +1,7 @@
 # Thoughts on Thinking Coin.
 * Introduction:
-In this File you will see all thoughts and ideas update liked to Thinkin Coin
-is space to capure and orginize ideas related to vision and direction of Thinking Coin project
+In this File you will see all thoughts and ideas update linked to Thinking Coin,
+Space to capure and orginize ideas related to vision and direction of Thinking Coin project.
 * Core Ideas.
   ### 1. Breaking language Barriers
 - Develop AI models for seamles realtime voice communication
@@ -25,7 +25,7 @@ is space to capure and orginize ideas related to vision and direction of Thinkin
   - Theme: "Celebrate with You: Happy New Year."  
   - Tagline: "AI is your hall, Thinking Coin your gift to your community."  
   - Involve celebrities to promote AI-powered cultural episodes.
-    ### Open Questions or Challenges  
+  ### Open Questions or Challenges  
 - How can we best align Thinking Coin rewards with user contributions?  
 - What are the most efficient ways to collect voice data globally?  
 - How can we reduce language translation costs for rural areas?
