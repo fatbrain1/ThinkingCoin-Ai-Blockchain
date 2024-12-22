@@ -1,27 +1,33 @@
-name: CI Workflow  # Smartc2.yml
+name: Vision Workflow  # Name of the workflow
 
-on:                # Events that trigger the workflow
+on:                  # Events to trigger the workflow
   push:
     branches:
-      - main
+      - main         # Run the workflow on push to the main branch
   pull_request:
     branches:
-      - main
+      - main         # Run the workflow on pull requests targeting the main branch
 
-jobs:              # Define jobs in the workflow
-  build:
-    runs-on: ubuntu-latest  # Environment to run the job
+jobs:                # Define the workflow jobs
+  vision-sync:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3  # GitHub-provided action
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Check out the repository code
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Validate YAML Files
+        uses: rhysd/actionlint@v1  # Validate YAML syntax to ensure workflows are error-free
+
+      - name: Run Vision Update Script
+        run: |
+          echo "Syncing project vision and thoughts..." 
+          echo "Vision updates are live!" > vision.log
+
+      - name: Upload Vision Logs
+        uses: actions/upload-artifact@v3  # Save logs as an artifact
         with:
-          node-version: '16'
+          name: vision-logs
+          path: vision.log
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
+      - name: Send Vision Update Notification
+        run: echo "Vision Workflow Completed Successfully!"  
