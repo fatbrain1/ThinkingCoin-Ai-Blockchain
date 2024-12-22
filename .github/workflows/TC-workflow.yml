@@ -1,15 +1,10 @@
-name: Vision Workflow  # Name of the workflow
+name: Vision Workflow  # TC-workflow.yml
 
 on:                  # Events to trigger the workflow
   push:
     branches:
-      - main         # Run the workflow on push to the main branch
-            # git checkout -b vision-updates
-          
-
-
-      - main         # Run the workflow on pull requests targeting the main branch
-
+     
+        - main         # Run the workflow on pull requests targeting the main branch
 jobs:                # Define the workflow jobs
   vision-sync:
     runs-on: ubuntu-latest  # Use the latest Ubuntu environment
